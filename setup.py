@@ -1,6 +1,6 @@
 import os
 import sys
-from setuptools import setup, find_packages
+from setuptools import setup, find_namespace_packages
 from fnmatch import fnmatchcase
 from distutils.util import convert_path
 
@@ -46,16 +46,14 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.BrandingMN',
       version='0.0.1',
       description=('LawHelpMN Branding'),
-      long_description='# docassemble.BrandingMN\n\nLawHelpMN Branding\n\n## Author\n\nAmanda Sauber, alsauber@mnlegalservices.org\n\n',
+      long_description='# docassemble.BrandingMN\r\n\r\nLawHelpMN Branding\r\n\r\n## Author\r\n\r\nAmanda Sauber, alsauber@mnlegalservices.org\r\n\r\n',
       long_description_content_type='text/markdown',
       author='Amanda Sauber',
       author_email='alsauber@mnlegalservices.org',
-      license='The MIT License (MIT)',
+      license='MIT',
       url='https://docassemble.org',
-      packages=find_packages(),
-      namespace_packages=['docassemble'],
+      packages=find_namespace_packages(),
       install_requires=[],
       zip_safe=False,
       package_data=find_package_data(where='docassemble/BrandingMN/', package='docassemble.BrandingMN'),
      )
-
